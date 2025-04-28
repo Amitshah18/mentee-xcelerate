@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find a Mentor - MenteeXcelerate</title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="progress.html">Track Progress</a></li>
+                <li><a href="group.html">Group Mentoring</a></li>
+                <li><a href="mentor-onboarding.html">Mentor Onboarding</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="faqs.html">FAQs</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="joinmeet.html">Join Your Video Call</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="match-form">
+        <form id="scheduleForm">
+            <label for="meetingRoom">Meeting Room Name:</label>
+            <input type="text" id="meetingRoom" name="meetingRoom" required>
+            <label for="meetingTime">Meeting Time:</label>
+            <input type="datetime-local" id="meetingTime" name="meetingTime" required>
+            <button type="submit">Join Meeting</button>
+        </form>
+        
+        <div id="meetingContainer" style="display: none;">
+            <iframe id="jitsiIframe" style="width: 100%; height: 600px; border: none;" allow="camera; microphone; fullscreen; display-capture"></iframe>
+        </div>
+        
+        <script>
+        document.getElementById('scheduleForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+        
+            var meetingRoom = document.getElementById('meetingRoom').value;
+            var meetingTime = document.getElementById('meetingTime').value;
+        
+            // Here you would typically save the meeting details in a database
+            // and/or send an email notification to the participants
+        
+            // Set the iframe src to the Jitsi meeting URL
+            var iframe = document.getElementById('jitsiIframe');
+            iframe.src = 'https://meet.jit.si/' + encodeURIComponent(meetingRoom);
+        
+            // Show the meeting container
+            document.getElementById('meetingContainer').style.display = 'block';
+        });
+        </script>
+        
+    <footer>
+        <p>&copy; 2024 MenteeXcelerate</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
