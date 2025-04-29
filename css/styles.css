@@ -1,0 +1,238 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f6fa;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    position: relative;
+    z-index: 10;
+}
+        .button-container {
+            display: grid;
+            grid-template-columns: auto auto;
+            column-gap: 20px; 
+        }
+
+
+h1, h2 {
+    margin: 10px 0;
+    font-size: 2.5rem;
+}
+
+p {
+    font-size: 1.1rem;
+}
+
+a {
+    color: #4CAF50;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #45a049;
+}
+
+.cta-button, .back-button {
+    display: inline-block;
+    padding: 12px 20px;
+    background-color: #45a049;
+    color: white;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.cta-button:hover, .back-button:hover {
+    background-color: #3e9443;
+    transform: scale(1.05);
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    z-index: 10;
+    margin-top: 40px;
+}
+
+/* Navigation Styles */
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    font-size: 1.1rem;
+    padding: 8px 15px;
+    border-radius: 20px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+nav ul li a:hover {
+    background-color: #3e9443;
+    transform: scale(1.05);
+}
+
+/* Features Section */
+.features {
+    background-color: #f0f4f8;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.features h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.feature-list {
+    display: flex;
+    justify-content: space-around;
+    margin: 0 auto;
+    max-width: 1200px;
+    flex-wrap: wrap;
+}
+
+.feature {
+    background-color: white;
+    padding: 30px;
+    margin: 15px;
+    border-radius: 12px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    flex-basis: 30%;
+    transition: transform 0.3s ease;
+    text-align: center;
+}
+
+.feature h3 {
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+}
+
+.feature p {
+    font-size: 1rem;
+    color: #666;
+}
+
+.feature:hover {
+    transform: translateY(-10px);
+}
+
+/* Form Styles */
+form {
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    max-width: 500px;
+    margin: 30px auto;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+button {
+    width: 100%;
+    padding: 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #3e9443;
+    transform: translateY(-3px);
+}
+
+/* Progress Tracker Styles */
+.progress ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+}
+
+.progress ul li {
+    background-color: #f8f9fa;
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.progress ul li:nth-child(even) {
+    background-color: #f0f4f8;
+}
+
+/* Group Session Styles */
+.group-sessions ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.group-sessions ul li {
+    background-color: #f8f9fa;
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.group-sessions ul li:hover {
+    transform: translateX(10px);
+}
+
+/* Animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+header, .features, .form, .progress, .group-sessions, footer {
+    animation: fadeInUp 1s ease;
+}
