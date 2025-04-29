@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback - MenteeXcelerate</title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Feedback</h1>
+        <a href="index.html" class="back-button">Back to Home</a>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="progress.html">Track Progress</a></li>
+            <li><a href="group.html">Group Mentoring</a></li>
+            <li><a href="mentor-onboarding.html">Mentor Onboarding</a></li>
+            <li><a href="profile.html">Profile</a></li>
+            <li><a href="feedback.html">Feedback</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="faqs.html">FAQs</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="joinmeet.html">Join Your Video Call</a></li>
+        </ul>
+    </nav>
+    
+
+    <section class="feedback">
+        <h2>Share Your Experience</h2>
+        <form id="feedbackForm">
+            <label for="mentor">Mentor:</label>
+            <select id="mentor" name="mentor">
+                <option value="mentor1">John Doe</option>
+                <option value="mentor2">Jane Smith</option>
+            </select>
+            
+            <label for="feedback">Your Feedback:</label>
+            <textarea id="feedback" name="feedback" rows="5"></textarea>
+            
+            <label for="rating">Rate Your Experience:</label>
+            <select id="rating" name="rating">
+                <option value="5">5 - Excellent</option>
+                <option value="4">4 - Good</option>
+                <option value="3">3 - Average</option>
+                <option value="2">2 - Below Average</option>
+                <option value="1">1 - Poor</option>
+            </select>
+
+            <button type="submit">Submit Feedback</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 MenteeXcelerate</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
