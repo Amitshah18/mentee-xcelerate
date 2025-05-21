@@ -28,7 +28,7 @@ export default function BookingPage({ params }: { params: { id: string } }) {
     rating: 4.9,
     reviews: 124,
     price: 2000,
-    bio: "15+ years of experience in tech leadership roles. I help professionals navigate their tech careers and develop leadership skills.",
+    bio: "I help professionals navigate their tech careers and develop leadership skills.",
   }
 
   // Mock time slots
